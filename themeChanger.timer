@@ -1,0 +1,11 @@
+[Unit]
+Description=Auto Theme Changer. Schedules Dark Mode
+
+[Timer]
+/* OnCalender=*-*-* 06,18:00:00 */
+OnCalender=*-*-* *:*:00
+Persistent=true
+Unit=themeChanger.service
+
+[Install]
+WantedBy=timers.target

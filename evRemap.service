@@ -1,0 +1,13 @@
+[Unit]
+Description=EvRemap: The God Tier Keys Remapper
+
+[Service]
+WorkingDirectory=/
+Type=simple
+# ExecStart=bash -c "~/.local/bin/evremap remap ~/.config/evremap/remap-config.toml"
+ExecStart=parallel --verbose --delay 5 ~/.local/bin/evremap remap ~/.config/evremap/remap-config-{} ::: art.toml lkb.toml
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Auto Theme Changer. Schedules Dark Mode
+
+[Service]
+Type=simple
+ExecStart=%h/MyScripts/themeSwitcher.sh
+
+[Install]
+WantedBy=default.target
